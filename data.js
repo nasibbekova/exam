@@ -106,52 +106,10 @@ const data = [
 ]
 
 
-// let cont = document.querySelector('.container')
-
-// for (item of data){
-//     let item = document.createElement('div')
-//     let img = document.createElement('img')
-//     let h2 = document.createElement('h2')
-//     let pOne =  document.createElement('p')
-//     let button = document.createElement('button')
-//     let hr = document.createElement('hr')
-//     let pTwo = document.createElement('h2')
-//     let span = document.createElement('span')
-//     let imgOne = document.createElement('img')
-//     let spanTwo = document.createElement('span')
-//     let imgTwo = document.createElement('img')
-//     let spanThree = document.createElement('span')
-//     let h2Three = document.createElement('h2')
-//     let spanThee = document.createElement('span')
-//     let imgThree = document.createElement('img')
-//     let spanFour = document.createElement('span')
-//     let imgFour = document.createElement('img')
-//     let spanFive = document.createElement('span')
-//     let h2Four = document.createElement('h2')
-//     let p = document.createElement('span')
-
-
-//     item.classList.add('item')
-//     img.src =  `./img/${item.img}.png`
-//     h2.classList = item.title
-//     pOne.classList.add = 'from' + item.price
-//     button.classList.add = "Buy"
-//     pTwo.classList.add = item.specs.display.size
-//     span.classList.add = item.specs.display.title
-//     imgOne.classList.add = item.url
-//     spanTwo.classList.add = item.specs.chip.title
-//     imgTwo.classList.add = 
-//     spanThree.classList.add = item.specs.memory.size + type
-
-//     item.append(img, h2, p)
-//     button.append (button)
-
-
-
-// }
-let container = document.querySelector('container')
+let container = document.querySelector('.container')
 
 for (let elem of data) {
+    console.log(elem);
     let item = document.createElement('div')
     let box = document.createElement('div')
     let box_Img = document.createElement('img')
@@ -203,13 +161,13 @@ for (let elem of data) {
     smth.classList.add('smth')
     more.classList.add('more')
 
-    h1.innerHTML = elem.box
+    h1.innerHTML = elem.title
     h2.innerHTML = elem.price
     title_text.innerHTML = elem.specs.chip.title
-    boxes_text.innerHTML = elem.specs.boxes.title
-    boxes_desc.innerHTML = elem.specs.boxes.description
-    inch.innerHTML = elem.specs.el.size
-    inch_txt.innerHTML = elem.specs.el.title
+    boxes_text.innerHTML = elem.specs.ram.title
+    boxes_desc.innerHTML = elem.specs.ram.description
+    inch.innerHTML = elem.specs.memory.size
+    inch_txt.innerHTML = elem.specs.memory.type
     memory_text.innerHTML = elem.specs.memory.size + elem.specs.memory.type
     bottom_desc.innerHTML = elem.specs.battery + ' ' + 'Hours'
     camera_text.innerHTML = elem.specs.camera.title
@@ -217,7 +175,7 @@ for (let elem of data) {
     weight_txt.innerHTML = elem.specs.weight
     smthings.innerHTML = elem.specs.smth
     title_Img.src = `./img/${elem.specs.chip.chip_ing}`
-    box_Img.src = `./img/${elem.specs.boxes.memory_img}`
+    // box_Img.src = `./img/${elem.specs.boxes.memory_img}`
     img.src = `./img/${elem.img}`
     bottom_Img.src = `./img/battery.png`
     camera_Img.src = `./img/video.png`
